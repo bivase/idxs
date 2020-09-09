@@ -1,14 +1,14 @@
-#include "stdafx.h"
+#include "stdafx/stdafx.h"
 
 namespace idxs
 {
 	template<class T = size_t>
-	struct dvbs2
+    struct dvbs2_mono
 	{
-		using value_type = typename T;
+        using value_type = T;
 		static constexpr T period{ 188 };
 		static constexpr T len{ 2 };
-		static constexpr T rows{ 9 };
+        static constexpr T rows{ 8 };
 		static constexpr T cols{ period };
 		static constexpr auto get()noexcept
 		{
